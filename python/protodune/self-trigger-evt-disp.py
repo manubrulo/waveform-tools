@@ -70,7 +70,7 @@ if __name__=="__main__":
         hits=None
 
     nview=1 if args.collection_only else 3
-    fig,ax=plt.subplots(len(apas), nview, sharex=True, gridspec_kw=dict(top=0.85, left=0.1, right=0.95, hspace=0.02), figsize=map(float, args.figsize), squeeze=False)
+    fig,ax=plt.subplots(len(apas), nview, sharex=True, gridspec_kw=dict(top=0.85, left=0.1, right=0.95, hspace=0.02), figsize=list(map(float, args.figsize)), squeeze=False)
 
     for i,apa in enumerate(apas):
         plot_with_hits(ax[i,0], views[apa]["z"], hits)
